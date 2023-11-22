@@ -1,11 +1,12 @@
 # Challenge_parental_USB
 
-Challenge que genera una clave en función del si un determinado dispositivo extraíble, denominado "dispositivo parental", se encuentra conectado al equipo.
+Challenge que genera una clave en funciï¿½n del si un determinado dispositivo extraï¿½ble, denominado "dispositivo parental", se encuentra conectado al equipo.
 
+Se considera parental ya que permite comprobar que, por ejemplo, el USB del padre/madre o de un empleado de la oficina se encuentre conectado
 
 ## Prerrequisitos
 
-Instalar la librería `win32file` con `pip install pywin32`
+Instalar la librerï¿½a `win32file` con `pip install pywin32`
 
 
 ejemplo de configuracion json
@@ -23,6 +24,6 @@ ejemplo de configuracion json
 
 ## Funcionamiento
 
-Todas las funciones y la lógica del challenge se encuentran en el fichero parental_usb_challenge.py, el cual es un programa en python que contiene toda la lógica del challenge. La función principal dentro del fichero que gestiona toda la lógica del challenge es locate_usb(), la cual devuelve la lista de dispositivos extraíbles conectados.
+Todas las funciones y la lï¿½gica del challenge se encuentran en el fichero parental_usb_challenge.py, el cual es un programa en python que contiene toda la lï¿½gica del challenge. La funciï¿½n principal dentro del fichero que gestiona toda la lï¿½gica del challenge es locate_usb(), la cual devuelve la lista de dispositivos extraï¿½bles conectados.
 
-Primero hay que llamar al método win32file.GetLogicalDrives() para obtener la lista de dispositivos lógicos. Después, mediante el método GetDriveType() se obtiene el tipo de dispositivo lógico y posteriormente win32file.DRIVE_REMOVABLE para comprobar que es un dispositivo extraíble. Con la lista definitiva, se almacena en un array y se comprueba si el dispositivo objetivo se encuentra en la lista o no. Finalmente, se genera una clave en función de si está conectado o no.
+Primero hay que llamar al mï¿½todo win32file.GetLogicalDrives() para obtener la lista de dispositivos lï¿½gicos. Despuï¿½s, mediante el mï¿½todo GetDriveType() se obtiene el tipo de dispositivo lï¿½gico y posteriormente win32file.DRIVE_REMOVABLE para comprobar que es un dispositivo extraï¿½ble. Con la lista definitiva, se almacena en un array y se comprueba si el dispositivo objetivo se encuentra en la lista o no. Finalmente, se genera una clave en funciï¿½n de si estï¿½ conectado o no.
